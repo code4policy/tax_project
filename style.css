@@ -2093,10 +2093,17 @@ p {
 
 #slider_175 {
   width: 1200px; /* Increase the width of the slider */
-  height: 40px; /* Increase the height of the slider */
+  height: 60px; /* Increase the height of the slider */
   display: block; /* Ensure it's a block-level element */
   margin: 20px auto; /* Center the slider horizontally */
   background-color: #f0f0f0; /* Optional: Add a background color */
   border-radius: 10px; /* Optional: Add rounded corners */
   outline: none; /* Remove the default focus outline */
+  color: red;
+}
+
+.container_175 {
+  width: 1200px;             /* Same width as the slider */
+  margin: 0 auto;           /* Center the container */
+  text-align: center;       /* Ensure proper alignment of content */
 }
