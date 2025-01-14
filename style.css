@@ -2044,6 +2044,35 @@ p {
   max-width: 80%; /* Optional: Limit container width */
 }
 
+/* Style for budget total slider and note*/
+#spending-slider {
+    width: 100%;
+    appearance: none;
+    height: 10px;
+    background: blue;
+    outline: none;
+    border-radius: 5px;
+}
+
+#spending-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#note-container {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+    display: none;
+    background: transparent;
+}
+/* End of style for budget total slider and note*/
+
 .tax-section {
   background-color: #fff;
   text-align: center;

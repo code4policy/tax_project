@@ -15,3 +15,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('spending-slider');
+    const spendingVar = document.getElementById('spending-var');
+    const noteContainer = document.getElementById('note-container');
+
+    slider.addEventListener('input', () => {
+        const value = parseFloat(slider.value);
+        spendingVar.textContent = value.toFixed(1);
+
+        if (value > 4.6) {
+            slider.style.background = 'red';
+            if (!noteContainer.innerHTML) {
+                noteContainer.innerHTML = `
+                    Note: the property tax levy is limited by Massachusetts Proposition 2 ½. 
+                    <a href="https://www.mass.gov/info-details/proposition-2-12-and-tax-rate-process" target="_blank" style="color: red; text-decoration: underline;">
+                        Click here
+                    </a> for more information.
+                `;
+            }
+            noteContainer.style.display = 'block';
+        } else {
+            slider.style.background = 'blue';
+            noteContainer.style.display = 'none';
+        }
+    });
+});
