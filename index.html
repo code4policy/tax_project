@@ -1,5 +1,5 @@
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-touchevents js flexbox" data-once="drupal-dialog-deprecation-listener webform-dialog"><head>
-    <link rel="stylesheet" href=style.css>
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8"><style data-styles="">cob-chart,cob-contact-form,cob-map{visibility:hidden}.hydrated{visibility:inherit}</style>
 <meta name="description" content="Welcome to the official homepage for the City of Boston.">
 <link rel="shortlink" href="https://www.boston.gov/node/21">
@@ -23,7 +23,7 @@
 <meta name="MobileOptimized" content="width">
 <meta name="HandheldFriendly" content="true">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript" async="" src="//siteimproveanalytics.com/js/siteanalyze_580789.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4FWCXXL9V&amp;l=dataLayer&amp;cx=c&amp;gtm=45He5190v72169933za200"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="application/ld+json">{
+<script type="text/javascript" async="" src="//siteimproveanalytics.com/js/siteanalyze_580789.js"></script><script type="text/javascript" async="" src="//siteimproveanalytics.com/js/siteanalyze_580789.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4FWCXXL9V&amp;l=dataLayer&amp;cx=c&amp;gtm=45He5190v72169933za200"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="application/ld+json">{
     "@context": "https://schema.org",
     "@graph": [
         {
@@ -576,27 +576,34 @@
       </div>
     </div>
 
-  
-  
     <div class="b-c b-c--ntp b-c--nbp">
+
+
+
+
+
+
+
+<!-- Begin area for tax tool -->
+
       <div class="p-b300">
         <div class="g g--top">
           
            
 
            <h1>How does the government calculate your tax rate?</h1>
-               <div class="container">
-  <p> City of Boston Annual Spending </p>
-  <p> </p>
-    <p> </p>
-      <p> </p>
-      </div>
-    <div class="container">
-  <button id ="blue-button">  $4.4 Billion</button>
+  <div class="container">             
+    <p> City of Boston Spending </p>
+  </div>
+
+
+    <div class="container" style="width:100%">
+  <button id="blue-button">  $4.6 Billion</button>
     </div>
         <div class="container">
-  <p> The revenue to support this spending comes mostly from property taxes </p>
+  <p> The revenue to support spending comes mostly from property taxes. </p>
      </div>
+
   <!-- Flowchart after the text -->
   <div class="container">
     <!-- Boxes placed side by side -->
@@ -607,14 +614,116 @@
     <div class="box box1 green-box">$3.3 Billion</div>
     <div class="box box2 green-box">$1.3 Billion</div>
   </div>
-  <p> Property taxes depend on the <b> value of the property </b> and the <b> tax rate</b>.  The City looks at the value of all property in Boston to calculate the rates: </p>
+  <p> Property taxes depend on the <b>value of the property</b> and the <b>tax rate</b>.  The City looks at the value of all property in Boston to calculate the rates:</p>
 <div class="container">
     <!-- Boxes placed side by side -->
     <div class="box box1">Commercial Property Value</div>
     <div class="box box2">Residential Property Value</div>
   </div>
   <div class="container">
+    <!-- Boxes placed side by side -->
+    <div class="box box1">30% of Total Property Value</div>
+    <div class="box box2">70% of Total Property Value</div>
+  </div>
+  <div class="container">
+    <!-- Boxes placed side by side -->
     <div class="box box1">$60.8 Billion</div>
     <div class="box box2">$143 Billion</div>
+ </div>
+  </div class = "container">
+  <label for="slider_175">Select a value between 50% and 200%:</label>
+  <input type="range" id="slider_175" class="slider_175" min="50" max="250" step="1" value="175">
+  
+  <div class="slider-labels">
+    <span class="slider-label">50%</span>
+    <span class="slider-label">100%</span>
+    <span class="slider-label">150%</span>
+    <span class="slider-label">200%</span>
+    <span class="slider-label">250%</span>
   </div>
-  <script src="script.js"></script>         
+
+  <p>The slider adjusts the 175% Rule and updates the tax value dynamically.</p>
+
+  <script src="script.js"></script>
+
+
+</div>
+
+
+  <p>In a perfect system, commercial property owners would pay 30% of the taxes since they own 30% of the property value—that’s their <i>fair share</i>.
+    <br><br>
+    However, this is not how it works because of the 175% Rule. This rule says businesses can be charged up to 175% of their share, so homeowners don’t have to pay too much.</p>
+ 
+  <div class="container">
+    <!-- Boxes placed side by side -->
+    <div class="box box1">Commercial Property Taxes</div>
+    <div class="box box2">Residential Property Taxes</div>
+  </div>
+  <div class="container">
+    <div class="box box1 green-box">53% of Total Property Taxes</div>
+    <div class="box box2 green-box">47% of Total Property Taxes</div>
+  </div>
+  <div class="container">
+    <div class="box box1 green-box">$1.74 Billion</div>
+    <div class="box box2 green-box">$1.57 Billion</div>
+  </div>
+
+    <br>
+  <p>Property tax rates depend on how much revenue is needed from each class of property</p>
+
+  <div class="container">
+    <!-- Commercial Tax Rate -->
+    <div class="tax-section">
+      <h2>Commercial Tax Rate</h2>
+      <div class="calculation">
+        <div class="numerator">$1.74 Billion</div>
+        <div class="divider"></div>
+        <div class="denominator">$60.8 Billion</div>
+      </div>
+      <div class="result">$28.60 per $1000</div>
+    </div>
+
+    <!-- Residential Tax Rate -->
+    <div class="tax-section">
+      <h2>Residential Tax Rate</h2>
+      <div class="calculation">
+        <div class="numerator">$1.57 Billion</div>
+        <div class="divider"></div>
+        <div class="denominator">$143 Billion</div>
+      </div>
+      <div class="result">$11.0 per $1000</div>
+    </div>
+   <!-- <img src="images/tax_rates.jpg" style="margin-left: -130px;"> -->
+
+   <br>
+ 
+  
+
+    </div>
+    <div class="interactive-box">
+      <!-- has two side-by-side boxes -->
+        <div class="text-for-slider">
+  <p>Due to a decline in commercial property values after the Covid Pandemic, Mayor Wu’s proposal would give the city temporary authority over the 175% Rule to keep residential taxes low even though home values have gone up.
+          <br><br>
+  Use the interactive graph on the right to explore how adjusting the 175% rule impacts the overall distribution of the tax burden as well as the tax rate for each group.</p>
+        </div>
+        <div class="slider">
+        </div> 
+    <!-- <div class="container">
+    <div class="box box1">$60.8 Billion</div>
+    <div class="box box2">$143 Billion</div>
+  </div> -->
+
+
+
+  <!-- End area for tax tool -->
+
+
+
+
+
+  <script src="script.js"></script>
+
+
+
+</div></div></div></div></div></div></div></div></div></article></section></div></div></div></div><script type="text/javascript" id="" charset="">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//siteimproveanalytics.com/js/siteanalyze_580789.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script></body></html>

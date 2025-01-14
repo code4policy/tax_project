@@ -2015,5 +2015,88 @@ display: block;
 }
 
 p {
-    font-size: 30px;
+    font-size: 22px;
+}
+
+.interactive-box {
+    display: flex
+}
+
+.text-for-slider {
+    margin-top: 20px; /* Add spacing between the boxes and the paragraph */
+    text-align: left; /* Align the text to the left */
+}
+
+.slider {
+    height: 200px;
+    width: 40%;
+    padding: 160px 0 0 20px
+}
+
+.container {
+  display: flex; /* Side-by-side layout */
+  flex-direction: row; /* Ensure horizontal alignment */
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items to the top */
+  gap: 2rem; /* Space between sections */
+  max-width: 80%; /* Optional: Limit container width */
+}
+
+.tax-section {
+  background-color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px; /* Allow flexibility and set min width */
+  max-width: 400px; /* Optional: Set a maximum width */
+}
+
+.tax-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.calculation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.numerator, .denominator {
+  background-color: #e8f5e9;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  margin: 0.5rem 0;
+}
+
+.result {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+#slider_175 {
+  width: 1200px; /* Increase the width of the slider */
+  height: 40px; /* Increase the height of the slider */
+  display: block; /* Ensure it's a block-level element */
+  margin: 20px auto; /* Center the slider horizontally */
+  background-color: #f0f0f0; /* Optional: Add a background color */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  outline: none; /* Remove the default focus outline */
 }
