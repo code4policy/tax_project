@@ -1953,18 +1953,20 @@ error-text h1,.error-text .timeline-step-wrapper .timeline-number,.timeline-step
 }
 
 /* Add some styling for buttons (if you want to add any later) */
-button {
-  display: block;                   /* Make button block-level so it spans the width */
-  width: 400px;                     /* Set a fixed width */
-  margin: 160px auto;                /* Center the button with auto margins */
-  padding: 10px;                    /* Add padding inside the button */
-  background-color: darkblue;        /* Green background for button */
-  color: white;                     /* White text color */
-  border: none;                     /* Remove the default border */
-  border-radius: 5px;               /* Rounded corners */
-  font-size: 16px;                  /* Button text size */
-  cursor: pointer;                  /* Change cursor to pointer when hovering */
+#spending-container {
+  /* display: block;                   Make button block-level so it spans the width */
+  /* width: 400px;                     Set a fixed width */
+  /* margin: 160px auto;                Center the button with auto margins */
+  /* padding: 10px;                    Add padding inside the button */
+  background-color: skyblue;        /* Green background for button */
+  /* color: white;                     White text color */
+  /* border: none;                     Remove the default border */
+  /* border-radius: 5px;               Rounded corners */
+  /* font-size: 16px;                  Button text size */
+  /* cursor: pointer;                  Change cursor to pointer when hovering */
 }
+
+
 
 button:hover {
   background-color: skyblue;        /* Darker green when hovering */
@@ -2090,3 +2092,12 @@ p {
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }
+
+input[type="range"] {
+    padding: 0 
+}
+
+#spending-var {
+    font-family: inherit; /* Use the parent's font */
+    font-size: inherit; /* Use the parent's font size */
+  }
