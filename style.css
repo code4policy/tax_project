@@ -2107,3 +2107,9 @@ p {
   margin: 0 auto;           /* Center the container */
   text-align: center;       /* Ensure proper alignment of content */
 }
+
+.slider-labels {
+  display: flex;            /* Use flexbox for even spacing */
+  justify-content: space-between; /* Distribute labels evenly */
+  margin-top: 10px;         /* Add some space between the slider and labels */
+}
