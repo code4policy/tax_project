@@ -2092,7 +2092,7 @@ p {
 }
 
 #slider_175 {
-  width: 1200px; /* Increase the width of the slider */
+  width: 100%; /* Increase the width of the slider */
   height: 60px; /* Increase the height of the slider */
   display: block; /* Ensure it's a block-level element */
   margin: 20px auto; /* Center the slider horizontally */
@@ -2100,6 +2100,8 @@ p {
   border-radius: 10px; /* Optional: Add rounded corners */
   outline: none; /* Remove the default focus outline */
   margin-bottom: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .container_175 {
@@ -2168,3 +2170,4 @@ p {
   opacity: 1;
   visibility: visible;
 }
+
