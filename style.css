@@ -2099,7 +2099,7 @@ p {
   background-color: #f0f0f0; /* Optional: Add a background color */
   border-radius: 10px; /* Optional: Add rounded corners */
   outline: none; /* Remove the default focus outline */
-  color: red;
+  margin-bottom: 0px;
 }
 
 .container_175 {
@@ -2111,5 +2111,12 @@ p {
 .slider-labels {
   display: flex;            /* Use flexbox for even spacing */
   justify-content: space-between; /* Distribute labels evenly */
-  margin-top: 10px;         /* Add some space between the slider and labels */
+  margin-top: 0px;         /* Add some space between the slider and labels */
+  margin-bottom: 24px; 
+}
+
+.slider-labels {
+    font-size: 24px;
+    color: black;
+
 }
