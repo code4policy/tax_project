@@ -1999,6 +1999,7 @@ button:hover {
 .green-box {
   background-color: green; 
   color: white;
+  display:flex;
 }
 
 #blue-button {
@@ -2044,6 +2045,7 @@ p {
   max-width: 80%; /* Optional: Limit container width */
 }
 
+
 /* Style for budget total slider and note*/
 #spending-slider {
     width: 30%;
@@ -2083,6 +2085,7 @@ p {
 
 
 /* End of style for budget total slider and note*/
+
 
 .tax-section {
   background-color: #fff;
@@ -2133,6 +2136,90 @@ p {
   border-radius: 4px;
 }
 
+
+#slider_175 {
+  width: 100%; /* Increase the width of the slider */
+  height: 60px; /* Increase the height of the slider */
+  display: block; /* Ensure it's a block-level element */
+  margin: 20px auto; /* Center the slider horizontally */
+  background-color: #f0f0f0; /* Optional: Add a background color */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  outline: none; /* Remove the default focus outline */
+  margin-bottom: 0px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+.container_175 {
+  width: 1200px;             /* Same width as the slider */
+  margin: 0 auto;           /* Center the container */
+  text-align: center;       /* Ensure proper alignment of content */
+}
+
+.slider-labels {
+  display: flex;            /* Use flexbox for even spacing */
+  justify-content: space-between; /* Distribute labels evenly */
+  margin-top: 0px;         /* Add some space between the slider and labels */
+  margin-bottom: 24px; 
+}
+
+.slider-labels {
+    font-size: 24px;
+    color: black;
+    position: relative; /* Necessary for the tooltip */
+    cursor: pointer;
+
+}
+
+#label-175-hover{
+    color: #00008D;
+}
+
+#label-200-hover{
+    color: #D22D23;
+}
+
+
+/* Show tooltip on hover */
+.slider-labels:hover::after {
+  content: ''; /* Default: no tooltip */
+  position: absolute;
+  bottom: 100%; /* Position above the label */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show tooltip only for the 175% label */
+#label-175-hover:hover::after {
+  content: "Current ratio";
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+  left: 55%;
+  position: absolute; /* Position above the label */}
+
+#label-200-hover:hover::after {
+  content: "Mayor Wu's plan";
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+  left: 65%;
+  position: absolute; /* Position above the label */
+}
+
+
 input[type="range"] {
     padding: 0 
 }
@@ -2141,3 +2228,4 @@ input[type="range"] {
     font-family: inherit; /* Use the parent's font */
     font-size: inherit; /* Use the parent's font size */
   }
+
