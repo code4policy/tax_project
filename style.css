@@ -1953,18 +1953,20 @@ error-text h1,.error-text .timeline-step-wrapper .timeline-number,.timeline-step
 }
 
 /* Add some styling for buttons (if you want to add any later) */
-button {
-  display: block;                   /* Make button block-level so it spans the width */
-  width: 400px;                     /* Set a fixed width */
-  margin: 160px auto;                /* Center the button with auto margins */
-  padding: 10px;                    /* Add padding inside the button */
-  background-color: darkblue;        /* Green background for button */
-  color: white;                     /* White text color */
-  border: none;                     /* Remove the default border */
-  border-radius: 5px;               /* Rounded corners */
-  font-size: 16px;                  /* Button text size */
-  cursor: pointer;                  /* Change cursor to pointer when hovering */
+#spending-container {
+  /* display: block;                   Make button block-level so it spans the width */
+  /* width: 400px;                     Set a fixed width */
+  /* margin: 160px auto;                Center the button with auto margins */
+  /* padding: 10px;                    Add padding inside the button */
+  background-color: skyblue;        /* Green background for button */
+  /* color: white;                     White text color */
+  /* border: none;                     Remove the default border */
+  /* border-radius: 5px;               Rounded corners */
+  /* font-size: 16px;                  Button text size */
+  /* cursor: pointer;                  Change cursor to pointer when hovering */
 }
+
+
 
 button:hover {
   background-color: skyblue;        /* Darker green when hovering */
@@ -2043,6 +2045,48 @@ p {
   max-width: 80%; /* Optional: Limit container width */
 }
 
+
+/* Style for budget total slider and note*/
+#spending-slider {
+    width: 30%;
+    appearance: none;
+    height: 10px;
+    background: blue;
+    outline: none;
+    border-radius: 5px;
+}
+
+#spending-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#note-container {
+    margin-top: 10px;
+    font-size: 20px; /* Font size increased */
+    line-height: 1.2; /* Slightly increased for readability */
+    color: red; /* Text color red */
+    min-height: 50px; /* Reserves space for the note */
+    display: flex; /* Ensures content is centered */
+    align-items: center; /* Vertically aligns text */
+    justify-content: center; /* Horizontally aligns text */
+    text-align: center; /* Centers the text */
+    background: transparent; /* Default background */
+    visibility: hidden; /* Keeps the space but hides content */
+    transition: visibility 0.3s, opacity 0.3s; /* Smooth transition */
+    opacity: 0; /* Fully transparent initially */
+}
+
+
+
+/* End of style for budget total slider and note*/
+
+
 .tax-section {
   background-color: #fff;
   text-align: center;
@@ -2091,6 +2135,7 @@ p {
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }
+
 
 #slider_175 {
   width: 100%; /* Increase the width of the slider */
@@ -2174,4 +2219,13 @@ p {
   position: absolute; /* Position above the label */
 }
 
+
+input[type="range"] {
+    padding: 0 
+}
+
+#spending-var {
+    font-family: inherit; /* Use the parent's font */
+    font-size: inherit; /* Use the parent's font size */
+  }
 
