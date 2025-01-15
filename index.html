@@ -182,7 +182,16 @@
 <script src="/modules/contrib/google_tag/js/gtag.js?spylwv"></script>
 <script src="/modules/contrib/google_tag/js/gtm.js?spylwv"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TKGRDS" type="text/javascript"></script>
 
-  <script src="https://patterns.boston.gov/web-components/fleetcomponents/fleetcomponents.ytjefdmb.js" type="module" crossorigin="true" data-resources-url="https://patterns.boston.gov/web-components/fleetcomponents/" data-namespace="fleetcomponents"></script></head>
+  <script src="https://patterns.boston.gov/web-components/fleetcomponents/fleetcomponents.ytjefdmb.js" type="module" crossorigin="true" data-resources-url="https://patterns.boston.gov/web-components/fleetcomponents/" data-namespace="fleetcomponents"></script>
+  
+  <!-- For LaTeX (fractions) -->
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+  </script>
+  <!-- End LaTeX -->
+   
+</head>
+
   <body class="html bos_theme front not-logged-in node-published page-node-21 page-node node-type-landing-page">
 
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGRDS"
@@ -674,44 +683,35 @@
     <br>
     <p>The tax rates are finally calculated by spreading the tax obligation evenly across the property value for each group. This shows how much tax is paid per $1,000 of property value.</p>
 
-    <div class="container">
-      <!-- Commercial Tax Rate -->
-      <div class="tax-section">
-        <h2>Commercial Tax Rate</h2>
-        <div class="calculation">
-          <div class="numerator">$1.74 Billion</div>
-          <div class="divider"></div>
-          <div class="denominator">$60.8 Billion</div>
+    <div class="container-two">
+      <div class="title-and-fraction-container">
+        <div><strong>Commercial Tax Rate</strong></div>
+        <div class="fraction-container">
+          <div class="fraction">
+            <div class="numerator">$1.7 Billion</div>
+            <div class="divider"></div>
+            <div class="denominator">$60.8 Billion</div>
+          </div>
+          <div class="equals">=</div>
+          <div class="result">$27.96 per $1,000</div>
         </div>
-        <div class="result">$28.60 per $1000</div>
       </div>
 
-      <!-- Residential Tax Rate -->
-      <div class="tax-section">
-        <h2>Residential Tax Rate</h2>
-        <div class="calculation">
-          <div class="numerator">$1.57 Billion</div>
-          <div class="divider"></div>
-          <div class="denominator">$143 Billion</div>
+      <div class="title-and-fraction-container">
+        <div><strong>Residential Tax Rate</strong></div>
+        <div class="fraction-container">
+          <div class="fraction">
+            <div class="numerator">$1.6 Billion</div>
+            <div class="divider"></div>
+            <div class="denominator">$143 Billion</div>
+          </div>
+          <div class="equals">=</div>
+          <div class="result">$11.00 per $1,000</div>
         </div>
-        <div class="result">$11.0 per $1000</div>
       </div>
     </div>
    
   
-
-    
-    <div class="interactive-box">
-      <!-- has two side-by-side boxes -->
-        <div class="text-for-slider">
-          <p>Due to a decline in commercial property values after the Covid Pandemic, Mayor Wu’s proposal would give the city temporary authority over the 175% Rule to keep residential taxes low even though home values have gone up.
-          <br><br>
-        Use the interactive graph on the right to explore how adjusting the 175% rule impacts the overall distribution of the tax burden as well as the tax rate for each group.</p>
-        </div>
-        <div class="slider">
-          <img src="images/slider.jpg">
-        </div> 
-    </div>
 
   </div>
 
