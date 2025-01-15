@@ -2046,7 +2046,7 @@ p {
 
 /* Style for budget total slider and note*/
 #spending-slider {
-    width: 100%;
+    width: 30%;
     appearance: none;
     height: 10px;
     background: blue;
@@ -2066,11 +2066,22 @@ p {
 
 #note-container {
     margin-top: 10px;
-    font-size: 14px;
-    color: red;
-    display: none;
-    background: transparent;
+    font-size: 20px; /* Font size increased */
+    line-height: 1.2; /* Slightly increased for readability */
+    color: red; /* Text color red */
+    min-height: 50px; /* Reserves space for the note */
+    display: flex; /* Ensures content is centered */
+    align-items: center; /* Vertically aligns text */
+    justify-content: center; /* Horizontally aligns text */
+    text-align: center; /* Centers the text */
+    background: transparent; /* Default background */
+    visibility: hidden; /* Keeps the space but hides content */
+    transition: visibility 0.3s, opacity 0.3s; /* Smooth transition */
+    opacity: 0; /* Fully transparent initially */
 }
+
+
+
 /* End of style for budget total slider and note*/
 
 .tax-section {

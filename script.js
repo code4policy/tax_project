@@ -28,18 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (value > 4.6) {
             slider.style.background = 'red';
-            if (!noteContainer.innerHTML) {
-                noteContainer.innerHTML = `
-                    Note: the property tax levy is limited by Massachusetts Proposition 2 ½. 
-                    <a href="https://www.mass.gov/info-details/proposition-2-12-and-tax-rate-process" target="_blank" style="color: red; text-decoration: underline;">
-                        Click here
-                    </a> for more information.
-                `;
-            }
-            noteContainer.style.display = 'block';
+            noteContainer.innerHTML = `
+                <a href="https://www.mass.gov/info-details/proposition-2-12-and-tax-rate-process" 
+                   target="_blank" 
+                   style="color: red; text-decoration: underline;">
+                   Click here </a> &nbsp;for more information about how Proposition 2 1/2 limits the property tax levy.
+            `;
+            noteContainer.style.visibility = 'visible'; // Makes it visible
+            noteContainer.style.opacity = '1'; // Fully opaque
         } else {
             slider.style.background = 'blue';
-            noteContainer.style.display = 'none';
+            noteContainer.style.visibility = 'hidden'; // Hides the content
+            noteContainer.style.opacity = '0'; // Fully transparent
         }
     });
 });
