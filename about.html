@@ -418,7 +418,7 @@
         <a href="index.html" id="logoImg">
           <img src="https://patterns.boston.gov/images/public/logo.svg?spylwv" alt="Boston.gov" class="lo-i">
         </a>
-                  <span class="lo-t"><a>Mayor Michelle Wu</a></span>
+                  <span class="lo-t">Mayor Michelle Wu</span>
               </div>
     </div>
 
@@ -429,15 +429,14 @@
     <nav class="nv-h">
     <ul class="nv-h-l">
         
-        
-                    <li class="nv-h-l-i">
+                      <li class="nv-h-l-i">
                                   <a href="index.html" class="nv-h-l-a" data-drupal-link-system-path="node/32906">Home</a>
-                   
+        
                     <li class="nv-h-l-i">
                                   <a href="about.html" class="nv-h-l-a" data-drupal-link-system-path="node/32906">About the Project</a>
                             </li>
                     <li class="nv-h-l-i">
-                                  <a href="/public-notices" title="" class="nv-h-l-a" data-drupal-link-system-path="node/11666">Meet the Team</a>
+                                  <a href="team.html" title="" class="nv-h-l-a" data-drupal-link-system-path="node/11666">Meet the Team</a>
                             </li>
                     
             
@@ -559,7 +558,7 @@
         <div class="b-c b-c--nbp">
           <div class="str">
             <div class="str-c">
-                                        <!--    <div class="str-t"><h2>Monday, January 13</h2></div> -->
+                                           <!-- <div class="str-t"><h2>Friday, January 17</h2></div> -->
                           </div>
           </div>
         </div>
@@ -568,130 +567,14 @@
 
     <div class="b-c b-c--ntp b-c--nbp">
 
-
-
-
-
-
-
 <!-- Begin area for tax tool -->
 
-  <div class="p-b300">
-        
+<h2> About the Project </h2>
+<br>
+<p> This project is a part of the graduate-level course <i> Programming and Data for Policymakers </i> at Harvard Kennedy School. In collaboration with the City of Boston, a team of four graduate students developed a visual representation of property tax calculation aimed at educating Boston's commercial and residential property owners. The tool helps users understand how their property taxes are calculated. The students worked closely with City officials to conceptualize, prototype, iterate, and refine the tool, ensuring its final version meets the City's needs for clear and accessible property tax information. </p>
 
-    <h1>How does the government calculate your tax rate?</h1>
-    <div class="container slider-container">             
-      <p> City of Boston Spending </p>
-    </div>
-
-<!-- Budget total, slider and Prop 2.5 Note -->
-   <div class="container" style="width:100%">
-        <div class="box" id="spending-container">
-            $<span id="spending-var">4.6</span>&nbsp;Billion
-        </div>
-    </div>
-    <div class="container">
-        <input type="range" id="spending-slider" min="1.3" max="6" value="4.6" step="0.1">
-    </div>
-    <div id="note-container"></div>
-    <script src="script.js"></script>
-
-
-    <div class="container">
-      <p> The revenue to support spending comes mostly from property taxes. </p>
-    </div>
-
-    <!-- Flowchart after the text -->
-    <div class="container">
-      <!-- Boxes placed side by side -->
-      <div class="box box1">Property Taxes (<span id="prop-tax-perc-var">72</span>%)</div>
-      <div class="box box2">Other Sources (<span id="other-tax-perc-var">28</span>%)</div>
-    </div>
-    <div class="container">
-      <div class="box box1 green-box">$<span id="prop-tax-var">3.3</span>&nbsp;Billion</div>
-      <div class="box box2 green-box">$<span id="other-tax-var">1.3</span>&nbsp;Billion</div>
-    </div>
-    <p> Property taxes depend on the <b>value of the property</b> and the <b>tax rate</b>.  The City looks at the value of all property in Boston to calculate the rates:</p>
-    <div class="container">
-      <!-- Boxes placed side by side -->
-      <div class="box box1">Commercial Property Value</div>
-      <div class="box box2">Residential Property Value</div>
-    </div>
-    <div class="container">
-      <!-- Boxes placed side by side -->
-      <div class="box box1">30% of Total Property Value</div>
-      <div class="box box2">70% of Total Property Value</div>
-    </div>
-    <div class="container">
-      <!-- Boxes placed side by side -->
-      <div class="box box1">$60.8 Billion</div>
-      <div class="box box2">$143 Billion</div>
-    </div>
-
-    <p>In a perfect system, commercial property owners would pay 30% of the taxes since they own 30% of the property value—that’s their <i>fair share</i>.
-    <br><br>
-    However, this is not how it works because of the 175% Rule. This rule says businesses can be charged up to 175% of their share, so homeowners don’t have to pay too much.</p>
  
-    <div class="container">
-      <!-- Boxes placed side by side -->
-      <div class="box box1">Commercial Property Taxes</div>
-      <div class="box box2">Residential Property Taxes</div>
-    </div>
-    <div class="container">
-      <div class="box box1 green-box">53% of Total Property Taxes</div>
-      <div class="box box2 green-box">47% of Total Property Taxes</div>
-    </div>
-    <div class="container">
-      <div class="box box1 green-box">$1.74 Billion</div>
-      <div class="box box2 green-box">$1.57 Billion</div>
-    </div>
-
-    <br>
-    <p>Property tax rates depend on how much revenue is needed from each class of property</p>
-
-    <div class="container">
-      <!-- Commercial Tax Rate -->
-      <div class="tax-section">
-        <h2>Commercial Tax Rate</h2>
-        <div class="calculation">
-          <div class="numerator">$1.74 Billion</div>
-          <div class="divider"></div>
-          <div class="denominator">$60.8 Billion</div>
-        </div>
-        <div class="result">$28.60 per $1000</div>
-      </div>
-
-      <!-- Residential Tax Rate -->
-      <div class="tax-section">
-        <h2>Residential Tax Rate</h2>
-        <div class="calculation">
-          <div class="numerator">$1.57 Billion</div>
-          <div class="divider"></div>
-          <div class="denominator">$143 Billion</div>
-        </div>
-        <div class="result">$11.0 per $1000</div>
-      </div>
-    </div>
-   
-  
-
-    
-    <div class="interactive-box">
-      <!-- has two side-by-side boxes -->
-        <div class="text-for-slider">
-          <p>Due to a decline in commercial property values after the Covid Pandemic, Mayor Wu’s proposal would give the city temporary authority over the 175% Rule to keep residential taxes low even though home values have gone up.
-          <br><br>
-        Use the interactive graph on the right to explore how adjusting the 175% rule impacts the overall distribution of the tax burden as well as the tax rate for each group.</p>
-        </div>
-        <div class="slider">
-          <img src="images/slider.jpg">
-        </div> 
-    </div>
-
-  </div>
-
-
-  <!-- End area for tax tool -->
+<!-- End area for tax tool -->
 
 
 
