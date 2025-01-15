@@ -2309,4 +2309,12 @@ input[type="range"] {
     border-radius: 5px;
   }
 
+.note {
+  font-size: 0.875em; /* Smaller font size */
+  color: #666; /* Optional: Lighter text color for subtlety */
+  max-width: 1200px; /* Ensures it has the same width as other paragraphs */
+  text-align: justify; /* Aligns text neatly */
+  line-height: 1.4; /* Reduces line spacing */
+}
+
 /* End final tax rate calc section */
