@@ -1,5 +1,5 @@
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-touchevents js flexbox" data-once="drupal-dialog-deprecation-listener webform-dialog"><head>
-    <link rel="stylesheet" href=style.css>
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8"><style data-styles="">cob-chart,cob-contact-form,cob-map{visibility:hidden}.hydrated{visibility:inherit}</style>
 <meta name="description" content="Welcome to the official homepage for the City of Boston.">
 <link rel="shortlink" href="https://www.boston.gov/node/21">
@@ -23,7 +23,7 @@
 <meta name="MobileOptimized" content="width">
 <meta name="HandheldFriendly" content="true">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript" async="" src="//siteimproveanalytics.com/js/siteanalyze_580789.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4FWCXXL9V&amp;l=dataLayer&amp;cx=c&amp;gtm=45He5190v72169933za200"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="application/ld+json">{
+<script type="text/javascript" async="" src="//siteimproveanalytics.com/js/siteanalyze_580789.js"></script><script type="text/javascript" async="" src="//siteimproveanalytics.com/js/siteanalyze_580789.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4FWCXXL9V&amp;l=dataLayer&amp;cx=c&amp;gtm=45He5190v72169933za200"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="application/ld+json">{
     "@context": "https://schema.org",
     "@graph": [
         {
@@ -581,19 +581,24 @@
 
     <h1>How does the government calculate your tax rate?</h1>
     <div class="container slider-container">             
-      <p> City of Boston Spending </p>
+      <p>The City’s <strong>annual spending</strong>, which funds government operations, forms the basis of your tax rate</p>
     </div>
 
-
-    <div class="container" style="width:100%">
-      <div class="box" id ="spending-container">$<span id="spending-var">4.6</span>&nbsp;Billion</div>
+<!-- Budget total, slider and Prop 2.5 Note -->
+   <div class="container" style="width:100%">
+        <div class="box" id="spending-container">
+            $<span id="spending-var">4.6</span>&nbsp;Billion
+        </div>
     </div>
     <div class="container">
-      <input type="range" id="spending-slider" min="1.3" max="6" value="4.6" step=".1">
+        <input type="range" id="spending-slider" min="3.6" max="5.6" value="4.6" step="0.1">
     </div>
+    <div id="note-container"></div>
+    <script src="script.js"></script>
+
 
     <div class="container">
-      <p> The revenue to support spending comes mostly from property taxes. </p>
+      <p>The revenue to cover spending comes mostly from property taxes</p>
     </div>
 
     <!-- Flowchart after the text -->
@@ -606,7 +611,9 @@
       <div class="box box1 green-box">$<span id="prop-tax-var">3.3</span>&nbsp;Billion</div>
       <div class="box box2 green-box">$<span id="other-tax-var">1.3</span>&nbsp;Billion</div>
     </div>
-    <p> Property taxes depend on the <b>value of the property</b> and the <b>tax rate</b>.  The City looks at the value of all property in Boston to calculate the rates:</p>
+    <p>The City collects the $3.3 billion in property tax from commercial and residential properties.
+      First, the City calculates each group’s share of the total property value
+    </p>
     <div class="container">
       <!-- Boxes placed side by side -->
       <div class="box box1">Commercial Property Value</div>
@@ -623,9 +630,32 @@
       <div class="box box2">$143 Billion</div>
     </div>
 
-    <p>In a perfect system, commercial property owners would pay 30% of the taxes since they own 30% of the property value—that’s their <i>fair share</i>.
-    <br><br>
-    However, this is not how it works because of the 175% Rule. This rule says businesses can be charged up to 175% of their share, so homeowners don’t have to pay too much.</p>
+    <!-- Slider 175% -->
+    <div class = "container_175">
+      <label for="slider_175">Select a value between 50% and 200%:</label>
+      <input type="range" id="slider_175" class="slider_175" min="50" max="250" step="25" value="175">
+
+      <div class="slider-labels">
+        <span class="slider-label">50%</span>
+        <span class="slider-label">75%</span>
+        <span class="slider-label"> 100%</span>
+        <span class="slider-label"> 125%</span>
+        <span class="slider-label"> 150%</span>
+        <span class="slider-label" id="label-175-hover"> <strong>175%</strong></span>
+        <span class="slider-label" id="label-200-hover"><strong>200%</strong></span>
+        <span class="slider-label">225%</span>
+        <span class="slider-label">250%</span>
+      </div>
+
+      </div>
+
+      <p>The slider adjusts the 175% Rule and updates the tax value dynamically.</p>
+
+   
+
+    <!-- Ends 175% slider -->
+    
+    <p>Next, City Council decides what percentage of the $3.3 billion each group will pay. This is their <i>tax obligation</i>. <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter58/Section1A#:~:text=a)%20to%20provide,city%20or%20town%2C">State law</a> allows commercial property owners to be taxed up to 175% of their share, reducing the burden on residential property owners.</p>
  
     <div class="container">
       <!-- Boxes placed side by side -->
@@ -642,7 +672,7 @@
     </div>
 
     <br>
-    <p>Property tax rates depend on how much revenue is needed from each class of property</p>
+    <p>The tax rates are finally calculated by spreading the tax obligation evenly across the property value for each group. This shows how much tax is paid per $1,000 of property value.</p>
 
     <div class="container">
       <!-- Commercial Tax Rate -->
@@ -689,6 +719,20 @@
   <!-- End area for tax tool -->
 
   </div>
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></article></section></div></div></div></div><script type="text/javascript" id="" charset="">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//siteimproveanalytics.com/js/siteanalyze_580789.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script></body></html>
+
+
+
+  <!-- End area for tax tool -->
+
+
 
 
 
