@@ -2229,3 +2229,12 @@ input[type="range"] {
     font-size: inherit; /* Use the parent's font size */
   }
 
+
+.content-wrapper {
+  transform: scale(0.5); /* Scales the content to 80% */
+  transform-origin: center top; /* Ensures scaling starts from the top left */
+  width: 100%; /* Ensure the container takes up full width */
+  height: auto; /* Adjusts height accordingly */
+  overflow: hidden; /* Prevents overflow */
+}
+
