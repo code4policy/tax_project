@@ -2235,6 +2235,78 @@ input[type="range"] {
   transform-origin: center top; /* Ensures scaling starts from the top left */
   width: 100%; /* Ensure the container takes up full width */
   height: auto; /* Adjusts height accordingly */
-  overflow: hidden; /* Prevents overflow */
+  /* overflow: hidden; Prevents overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
 }
 
+/* Start final tax rate calc section */
+
+.container-two{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; 
+    margin-left: 70px;
+}
+
+.title-and-fraction-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    align-items: center;
+}
+
+.fraction-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+  }
+
+  .fraction {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px; /* Space before equals sign */
+  }
+
+  .numerator {
+    text-align: center;
+    padding-bottom: 5px; /* Space between numerator and bar */
+    border-radius: 0;
+    margin-bottom: 10px;
+    width: 155px;
+  }
+
+  .divider {
+    height: 3px;
+    border: none;
+    width: 155px;
+    background: black;
+    margin: 0 !important;
+  }
+
+  .denominator {
+    text-align: center;
+    padding-top: 5px; /* Space between bar and denominator */
+    border-radius: 0;
+    width: 167px;
+    margin-top: 10px;
+  }
+
+  .equals {
+    margin: 0 10px; /* Space on both sides of the equals sign */
+  }
+
+  .result {
+    background-color: #d9f7be; /* Light green background for the result */
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+/* End final tax rate calc section */
