@@ -182,7 +182,16 @@
 <script src="/modules/contrib/google_tag/js/gtag.js?spylwv"></script>
 <script src="/modules/contrib/google_tag/js/gtm.js?spylwv"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TKGRDS" type="text/javascript"></script>
 
-  <script src="https://patterns.boston.gov/web-components/fleetcomponents/fleetcomponents.ytjefdmb.js" type="module" crossorigin="true" data-resources-url="https://patterns.boston.gov/web-components/fleetcomponents/" data-namespace="fleetcomponents"></script></head>
+  <script src="https://patterns.boston.gov/web-components/fleetcomponents/fleetcomponents.ytjefdmb.js" type="module" crossorigin="true" data-resources-url="https://patterns.boston.gov/web-components/fleetcomponents/" data-namespace="fleetcomponents"></script>
+  
+  <!-- For LaTeX (fractions) -->
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+  </script>
+  <!-- End LaTeX -->
+   
+</head>
+
   <body class="html bos_theme front not-logged-in node-published page-node-21 page-node node-type-landing-page">
 
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGRDS"
@@ -580,21 +589,22 @@
         
 
     <h1>How does the government calculate your tax rate?</h1>
-    <div class="container slider-container">             
+    <div class="container slider-container" style="height:50px">             
       <p>The City’s <strong>annual spending</strong>, which funds government operations, forms the basis of your tax rate</p>
     </div>
 
 <!-- Budget total, slider and Prop 2.5 Note -->
-   <div class="container" style="width:100%">
-        <div class="box" id="spending-container">
+   <div class="container" style="width:30%; height:100px">
+        <div class="box" id="spending-container" style="height:100px;">
             $<span id="spending-var">4.6</span>&nbsp;Billion
         </div>
     </div>
     <div class="container">
         <input type="range" id="spending-slider" min="3.6" max="5.6" value="4.6" step="0.1">
     </div>
-    <div id="note-container"></div>
+
     <script src="script.js"></script>
+
 
 
     <div class="container">
@@ -604,15 +614,15 @@
     <!-- Flowchart after the text -->
     <div class="container">
       <!-- Boxes placed side by side -->
-      <div class="box box1">Property Taxes (<span id="prop-tax-perc-var">72</span>%)</div>
-      <div class="box box2">Other Sources (<span id="other-tax-perc-var">28</span>%)</div>
+      <div class="box box1" style="width: 30%; height:100px">Property Taxes (<span id="prop-tax-perc-var">72</span>%)</div>
+      <div class="box box2" style="width: 30%; height:100px">Other Sources (<span id="other-tax-perc-var">28</span>%)</div>
     </div>
-    <div class="container">
-      <div class="box box1 green-box">$<span id="prop-tax-var">3.3</span>&nbsp;Billion</div>
-      <div class="box box2 green-box">$<span id="other-tax-var">1.3</span>&nbsp;Billion</div>
+    <div class="container" style="height:50px">
+      <div class="box box1 green-box" style="width: 30%; height:100px">$<span id="prop-tax-var">3.3</span>&nbsp;Billion</div>
+      <div class="box box2 green-box" style="width: 30%; height:100px">$<span id="other-tax-var">1.3</span>&nbsp;Billion</div>
     </div>
-    <p>Massachusetts has a split tax system, allowing the City to collect the property tax levy from commercial and residential properties at different rates. The City determines how much of the tax levy each group will pay by first calculating a 'natural tax rate' as follows:
-    </p>
+
+    <p>Massachusetts has a split tax system, allowing the City to collect the property tax levy from commercial and residential properties at different rates. The City determines how much of the tax levy each group will pay by first calculating a 'natural tax rate' as follows:</p>
    
   
     <div class="container">
@@ -666,39 +676,46 @@
     <br>
     <p>Finally, the tax rates for each group are calculated by spreading the tax obligation evenly across their respective total property values. This shows how much tax is paid per $1,000 of property value.</p>
 
-    <div class="container">
-      <!-- Commercial Tax Rate -->
-      <div class="tax-section">
-        <h2>Commercial Tax Rate</h2>
-        <div class="calculation">
-          <div class="numerator">$1.74 Billion</div>
-          <div class="divider"></div>
-          <div class="denominator">$60.8 Billion</div>
+    <div class="container-two">
+      <div class="title-and-fraction-container">
+        <div><strong>Commercial Tax Rate</strong></div>
+        <div class="fraction-container">
+          <div class="fraction">
+            <div class="numerator">$1.7 Billion</div>
+            <div class="divider"></div>
+            <div class="denominator">$60.8 Billion</div>
+          </div>
+          <div class="equals">=</div>
+          <div class="result">$27.96 per $1,000</div>
         </div>
-        <div class="result">$28.60 per $1000</div>
       </div>
 
-      <!-- Residential Tax Rate -->
-      <div class="tax-section">
-        <h2>Residential Tax Rate</h2>
-        <div class="calculation">
-          <div class="numerator">$1.57 Billion</div>
-          <div class="divider"></div>
-          <div class="denominator">$143 Billion</div>
+      <div class="title-and-fraction-container">
+        <div><strong>Residential Tax Rate</strong></div>
+        <div class="fraction-container">
+          <div class="fraction">
+            <div class="numerator">$1.6 Billion</div>
+            <div class="divider"></div>
+            <div class="denominator">$143 Billion</div>
+          </div>
+          <div class="equals">=</div>
+          <div class="result">$11.00 per $1,000</div>
         </div>
-        <div class="result">$11.0 per $1000</div>
       </div>
     </div>
 
+   
+  
+
   </div>
 
-  <!-- End area for tax tool -->
-
-  </div>
-
-
-
-
+<!-- messaging box -->
+<br>
+<div class="note">
+  <small>
+    Note: This tool is for educational purposes only and provides a simplified explanation of the tax rate calculation. It does not account for all legal nuances or provide precise figures. For your actual tax bill, refer to your mailed statement or view the quarterly tax bill and payment information online. For further assistance, contact the Taxpayer Referral and Assistance Center at 617-635-4287 or email TRACFAXSG@boston.gov.
+  </small>
+</div>
 
 
 
@@ -707,8 +724,6 @@
 
 
   <!-- End area for tax tool -->
-
-
 
 
 
