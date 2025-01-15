@@ -1997,6 +1997,7 @@ button:hover {
 .green-box {
   background-color: green; 
   color: white;
+  display:flex;
 }
 
 #blue-button {
@@ -2102,6 +2103,7 @@ p {
   margin-bottom: 0px;
   padding: 0px;
   margin: 0px;
+  border: 0px;
 }
 
 .container_175 {
@@ -2125,24 +2127,14 @@ p {
 
 }
 
-#label-175-hover:hover::after {
-  content: "Hello"; /* Use the title attribute for the tooltip message */
-  position: absolute;
-  bottom: 100%; /* Position above the label */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease-in-out;
+#label-175-hover{
+    color: #00008D;
 }
+
+#label-200-hover{
+    color: #D22D23;
+}
+
 
 /* Show tooltip on hover */
 .slider-labels:hover::after {
@@ -2169,5 +2161,17 @@ p {
   content: "Current ratio";
   opacity: 1;
   visibility: visible;
+  top: 100%;
+  left: 55%;
+  position: absolute; /* Position above the label */}
+
+#label-200-hover:hover::after {
+  content: "Mayor Wu's plan";
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+  left: 65%;
+  position: absolute; /* Position above the label */
 }
+
 
