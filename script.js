@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         slider175.addEventListener('input', () => {
         const value = parseFloat(slider175.value);
-        spendingVar.textContent = value.toFixed(1);
 
         if (value < 170) {
             noteContainer175.innerHTML = `
