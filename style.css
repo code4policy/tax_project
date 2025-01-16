@@ -2263,6 +2263,55 @@ input[type="range"] {
   align-items: center
 }
 
+/* Style for Natural Tax Rate Calculation Section */
+.natural-tax-rate {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Arrange children in a row */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align items vertically in the center */
+    width: 100%; /* Ensure the container takes up full width */
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+}
+
+.title-and-fraction-container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.ntr-fraction-container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center the fraction container */
+}
+
+.ntr-fraction {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Align items horizontally in the center */
+}
+
+.ntr-divider {
+    height: 3px;
+    border: none;
+    width: 405px;
+    background: black;
+    margin: 0 !important;
+}
+
+.ntr-denominator {
+    white-space: nowrap; /* Prevent line breaks within the denominator */
+}
+
+.equals {
+    margin-left: 10px; /* Add some space between the fraction and the equals sign */
+}
+
+.ntr-result {
+    margin-left: 10px; /* Add some space between the equals sign and the result */
+}
+}
 /* Start final tax rate calc section */
 
 .container-two{
