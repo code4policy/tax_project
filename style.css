@@ -2192,7 +2192,7 @@ position: relative;
 /* Show tooltip on hover */
 .slider-labels:hover::after {
   content: ''; /* Default: no tooltip */
-  position: absolute;
+  position: relative;
   bottom: 100%; /* Position above the label */
   left: 50%;
   transform: translateX(-50%);
@@ -2319,6 +2319,17 @@ input[type="range"] {
 
   #slider_175 {
   width: 100%; /* Full width slider */
+}
+
+#tooltip-175 {
+    position: absolute;
+    z-index: 10; /* Bring tooltip above slider */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    display: none; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction */
 }
 
 /* End final tax rate calc section */
