@@ -19,8 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const sliderWidth = sliderRect.width; // Slider's width
 
         // Set tooltip position relative to slider's value
+
         tooltip175.style.left = `${(value175/100 * 980) - 1200 }px`;
         tooltip175.style.top = `${sliderRect.top + window.pageYOffset - 1786}px`; // Position tooltip above the slider
+
         tooltip175.style.display = 'block'; // Show tooltip
     });
 
@@ -81,27 +83,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// Start interactivity of final tax rate block
 
 document.addEventListener('DOMContentLoaded', function () {
     const numeratorSpans = document.querySelectorAll('.numerator span');
     const denominatorSpans = document.querySelectorAll('.denominator span');
     const resultSpans = document.querySelectorAll('.result span');
+    const commPropLevy = document.getElementById('comm-tax-levy-span')
+    const resPropLevy = document.querySelector('.res-tax-levy-span')
   
+    // Create MutationObservers for commPropLevy
+    // res prop levy number doesn't need an observer because comm/res always change if one changes
+    const levyObserver = new MutationObserver(() => {
+        console.log("test test test");
+        numeratorSpans[0].textContent = parseFloat(commPropLevy.textContent).toFixed(1);
+        numeratorSpans[1].textContent = parseFloat(resPropLevy.textContent).toFixed(1)
+    });
+    
+   levyObserver.observe(commPropLevy, {childList: true, characterData: true, subtree: true});
+
+
     // Function to calculate and update tax rate for a specific index
     const updateTaxRate = (index) => {
-      console.log("Updating tax rate...");
-      const numerator = parseFloat(numeratorSpans[index].textContent); 
-      const denominator = parseFloat(denominatorSpans[index].textContent);
-      const taxRate = (numerator / denominator) * 1000; 
-      resultSpans[index].textContent = taxRate.toFixed(2); 
-    };
-  
+        const numerator = parseFloat(numeratorSpans[index].textContent); 
+        const denominator = parseFloat(denominatorSpans[index].textContent);
+        const taxRate = (numerator / denominator) * 1000; 
+        resultSpans[index].textContent = taxRate.toFixed(2); 
+      };
+
     // Create MutationObservers for each numerator/denominator pair
     numeratorSpans.forEach((numeratorSpan, index) => {
       const observer = new MutationObserver(() => {
         updateTaxRate(index);
       });
-  
+      
       // Observe numerator and denominator of the same index
       observer.observe(numeratorSpan, { childList: true, characterData: true, subtree: true });
       observer.observe(denominatorSpans[index], { childList: true, characterData: true, subtree: true });
@@ -111,4 +126,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
-
+// End interactivity of final tax rate block
