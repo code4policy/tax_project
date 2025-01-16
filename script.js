@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const propTaxVar = document.getElementById('prop-tax-var');
     const propTaxPercVar = document.getElementById('prop-tax-perc-var');
     const otherTaxPercVar = document.getElementById('other-tax-perc-var');
+    const noteContainer175 = document.getElementById('note-container-175');
 
     // Slider 175 tooltip functionality
     slider175.addEventListener('input', (e) => {
@@ -55,5 +56,27 @@ document.addEventListener('DOMContentLoaded', () => {
             noteContainer.style.opacity = '0'; // Fully transparent
         }
     });
+
+        slider175.addEventListener('input', () => {
+        const value = parseFloat(slider175.value);
+        spendingVar.textContent = value.toFixed(1);
+
+        if (value < 170) {
+            noteContainer175.innerHTML = `
+                <a href="https://www.mass.gov/info-details/proposition-2-12-and-tax-rate-process" 
+                   target="_blank" 
+                   style="color: red; text-decoration: underline;">
+                   Click here </a> &nbsp;for more information about why the ratio cannot be lower than 170%.
+            `;
+            noteContainer175.style.visibility = 'visible'; // Makes it visible
+            noteContainer175.style.opacity = '1'; // Fully opaque
+        } else {
+            slider175.style.color = ''; // Reset to default color
+            noteContainer175.style.visibility = 'hidden'; // Hides the content
+            noteContainer175.style.opacity = '0'; // Fully transparent
+        }
+    });
 });
+
+
 
