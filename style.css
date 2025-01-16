@@ -2082,6 +2082,22 @@ p {
     opacity: 0; /* Fully transparent initially */
 }
 
+#note-container-175 {
+    margin-top: 10px;
+    font-size: 20px; /* Font size increased */
+    line-height: 1.2; /* Slightly increased for readability */
+    color: red; /* Text color red */
+    min-height: 50px; /* Reserves space for the note */
+    display: flex; /* Ensures content is centered */
+    align-items: center; /* Vertically aligns text */
+    justify-content: center; /* Horizontally aligns text */
+    text-align: center; /* Centers the text */
+    background: transparent; /* Default background */
+    visibility: hidden; /* Keeps the space but hides content */
+    transition: visibility 0.3s, opacity 0.3s; /* Smooth transition */
+    opacity: 0; /* Fully transparent initially */
+}
+
 
 
 /* End of style for budget total slider and note*/
@@ -2155,22 +2171,30 @@ p {
   width: 1200px;             /* Same width as the slider */
   margin: 0 auto;           /* Center the container */
   text-align: center;       /* Ensure proper alignment of content */
+  position: relative;
 }
 
 .slider-labels {
   display: flex;            /* Use flexbox for even spacing */
-  justify-content: space-between; /* Distribute labels evenly */
   margin-top: 0px;         /* Add some space between the slider and labels */
   margin-bottom: 24px; 
-}
-
-.slider-labels {
-    font-size: 24px;
+  position: absolute;
+  transform: translateX(0%);
+      font-size: 24px;
     color: black;
     position: relative; /* Necessary for the tooltip */
     cursor: pointer;
 
 }
+
+.slider-label {
+position: relative;
+
+}
+
+
+
+
 
 #label-175-hover{
     color: #00008D;
@@ -2184,7 +2208,7 @@ p {
 /* Show tooltip on hover */
 .slider-labels:hover::after {
   content: ''; /* Default: no tooltip */
-  position: absolute;
+  position: relative;
   bottom: 100%; /* Position above the label */
   left: 50%;
   transform: translateX(-50%);
@@ -2309,12 +2333,36 @@ input[type="range"] {
     border-radius: 5px;
   }
 
+
+  #slider_175 {
+  width: 100%; /* Full width slider */
+
+}
+
+#tooltip-175 {
+    position: absolute;
+    z-index: 10; /* Bring tooltip above slider */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    display: none; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction */
+}
+
+#slider_175::-webkit-slider-runnable-track {
+    background: var(--slider-color);
+    height: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+
 .note {
   font-size: 0.875em; /* Smaller font size */
   color: #666; /* Optional: Lighter text color for subtlety */
   max-width: 1200px; /* Ensures it has the same width as other paragraphs */
   text-align: justify; /* Aligns text neatly */
   line-height: 1.4; /* Reduces line spacing */
+
 }
 
 /* End final tax rate calc section */
