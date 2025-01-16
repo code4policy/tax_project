@@ -2048,23 +2048,20 @@ p {
 
 /* Style for budget total slider and note*/
 #spending-slider {
-    width: 30%;
-    appearance: none;
-    height: 10px;
-    background: blue;
-    outline: none;
-    border-radius: 5px;
+    width: 30%; /* Increase the width of the slider */
+    height: 60px; /* Increase the height of the slider */
+    display: block; /* Ensure it's a block-level element */
+    margin: 20px auto; /* Center the slider horizontally */
+    background-color: #f0f0f0; /* Optional: Add a background color */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    outline: none; /* Remove the default focus outline */
+    margin-bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
 }
 
-#spending-slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border: 2px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-}
+
 
 #note-container {
     margin-top: 10px;
