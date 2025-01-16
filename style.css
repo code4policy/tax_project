@@ -2308,6 +2308,7 @@ input[type="range"] {
     bottom: 112px;
     right: 120px;
     width: 400px;
+    cursor: pointer;
   }
 
   #exemptions-popup{
