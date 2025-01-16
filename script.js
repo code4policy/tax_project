@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Set tooltip position relative to slider's value
         tooltip175.style.left = `${(value175/100 * 1100) -1100 }px`;
-        tooltip175.style.top = `${sliderRect.top + window.pageYOffset - 1400}px`; // Position tooltip above the slider
+        tooltip175.style.top = `${sliderRect.top + window.pageYOffset -1800}px`; // Position tooltip above the slider
         tooltip175.style.display = 'block'; // Show tooltip
     });
 
