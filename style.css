@@ -2403,11 +2403,12 @@ input[type="range"] {
 
 #tooltip-175 {
     position: absolute;
+    transform: translateX(-50%);
     z-index: 10; /* Bring tooltip above slider */
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 1px;
     display: none; /* Initially hidden */
     pointer-events: none; /* Prevent interaction */
 }
