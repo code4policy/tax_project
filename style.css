@@ -1988,7 +1988,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 20px;
+  margin: 20px;
   border-radius: 8px;
   position: relative;
   font-size: 30px;
@@ -1997,7 +1997,7 @@ button:hover {
 
 
 .green-box {
-  background-color: green; 
+  background-color: #77cb73; 
   color: white;
   display:flex;
 }
@@ -2255,9 +2255,9 @@ input[type="range"] {
 
 
 .content-wrapper {
-  transform: scale(0.5); /* Scales the content to 80% */
+  transform: scale(0.85); /* Scales the content to 80% */
   transform-origin: center top; /* Ensures scaling starts from the top left */
-  width: 100%; /* Ensure the container takes up full width */
+  width: auto; /* Ensure the container takes up full width */
   height: auto; /* Adjusts height accordingly */
   /* overflow: hidden; Prevents overflow */
   display: flex;
@@ -2333,6 +2333,7 @@ input[type="range"] {
     border-radius: 5px;
   }
 
+
   #slider_175 {
   width: 100%; /* Full width slider */
 
@@ -2354,6 +2355,14 @@ input[type="range"] {
     height: 8px;
     border-radius: 5px;
     cursor: pointer;
+
+.note {
+  font-size: 0.875em; /* Smaller font size */
+  color: #666; /* Optional: Lighter text color for subtlety */
+  max-width: 1200px; /* Ensures it has the same width as other paragraphs */
+  text-align: justify; /* Aligns text neatly */
+  line-height: 1.4; /* Reduces line spacing */
+
 }
 
 /* End final tax rate calc section */
