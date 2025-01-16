@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Set tooltip position relative to slider's value
         tooltip175.style.left = `${(value175/100 * 1100) -1100 }px`;
-        tooltip175.style.top = `${sliderRect.top - 400}px`; // Position tooltip above the slider
+        tooltip175.style.top = `${sliderRect.top + window.pageYOffset - 1400}px`; // Position tooltip above the slider
         tooltip175.style.display = 'block'; // Show tooltip
     });
 
@@ -70,8 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             noteContainer175.style.visibility = 'visible'; // Makes it visible
             noteContainer175.style.opacity = '1'; // Fully opaque
+            slider175.style.setProperty('--slider-color', 'red');
         } else {
-            slider175.style.color = ''; // Reset to default color
+            slider175.style.setProperty('--slider-color', ''); // Reset to default color
             noteContainer175.style.visibility = 'hidden'; // Hides the content
             noteContainer175.style.opacity = '0'; // Fully transparent
         }

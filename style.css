@@ -2335,6 +2335,7 @@ input[type="range"] {
 
   #slider_175 {
   width: 100%; /* Full width slider */
+
 }
 
 #tooltip-175 {
@@ -2346,6 +2347,13 @@ input[type="range"] {
     padding: 5px;
     display: none; /* Initially hidden */
     pointer-events: none; /* Prevent interaction */
+}
+
+#slider_175::-webkit-slider-runnable-track {
+    background: var(--slider-color);
+    height: 8px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* End final tax rate calc section */
