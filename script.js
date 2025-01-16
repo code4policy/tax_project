@@ -50,3 +50,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const numeratorSpans = document.querySelectorAll('.numerator span');
+    const denominatorSpans = document.querySelectorAll('.denominator span');
+    const resultSpans = document.querySelectorAll('.result span');
+  
+    // Function to calculate and update tax rate for a specific index
+    const updateTaxRate = (index) => {
+      console.log("Updating tax rate...");
+      const numerator = parseFloat(numeratorSpans[index].textContent); 
+      const denominator = parseFloat(denominatorSpans[index].textContent);
+      const taxRate = (numerator / denominator) * 1000; 
+      resultSpans[index].textContent = taxRate.toFixed(2); 
+    };
+  
+    // Create MutationObservers for each numerator/denominator pair
+    numeratorSpans.forEach((numeratorSpan, index) => {
+      const observer = new MutationObserver(() => {
+        updateTaxRate(index);
+      });
+  
+      // Observe numerator and denominator of the same index
+      observer.observe(numeratorSpan, { childList: true, characterData: true, subtree: true });
+      observer.observe(denominatorSpans[index], { childList: true, characterData: true, subtree: true });
+  
+      // Initial update for this index
+      updateTaxRate(index);
+    });
+  });
+  
