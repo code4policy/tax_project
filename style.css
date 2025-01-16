@@ -2354,7 +2354,7 @@ input[type="range"] {
   display: flex; /* Arrange children in a row */
   justify-content: center; /* Center the sections horizontally */
   align-items: center; /* Align the sections vertically */
-  gap: 8px; /* Add space between the sections */
+  gap: 6px; /* Add space between the sections */
   text-align: center; /* Center text within each section */
 }
 
