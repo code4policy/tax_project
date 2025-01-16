@@ -2083,7 +2083,7 @@ p {
 }
 
 #note-container-175 {
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 20px; /* Font size increased */
     line-height: 1.2; /* Slightly increased for readability */
     color: red; /* Text color red */
@@ -2155,7 +2155,7 @@ p {
 
 #slider_175 {
   width: 100%; /* Increase the width of the slider */
-  height: 60px; /* Increase the height of the slider */
+  height: 20px; /* Increase the height of the slider */
   display: block; /* Ensure it's a block-level element */
   margin: 20px auto; /* Center the slider horizontally */
   background-color: #f0f0f0; /* Optional: Add a background color */
@@ -2177,7 +2177,7 @@ p {
 .slider-labels {
   display: flex;            /* Use flexbox for even spacing */
   margin-top: 0px;         /* Add some space between the slider and labels */
-  margin-bottom: 24px; 
+  margin-bottom: 0px; 
   position: absolute;
   transform: translateX(0%);
       font-size: 24px;
@@ -2200,9 +2200,6 @@ position: relative;
     color: #00008D;
 }
 
-#label-200-hover{
-    color: #D22D23;
-}
 
 
 /* Show tooltip on hover */
@@ -2226,22 +2223,6 @@ position: relative;
 }
 
 /* Show tooltip only for the 175% label */
-#label-175-hover:hover::after {
-  content: "Current ratio";
-  opacity: 1;
-  visibility: visible;
-  top: 100%;
-  left: 55%;
-  position: absolute; /* Position above the label */}
-
-#label-200-hover:hover::after {
-  content: "Mayor Wu's plan";
-  opacity: 1;
-  visibility: visible;
-  top: 100%;
-  left: 65%;
-  position: absolute; /* Position above the label */
-}
 
 
 input[type="range"] {
@@ -2335,7 +2316,8 @@ input[type="range"] {
 
 
   #slider_175 {
-  width: 100%; /* Full width slider */
+  width: 30%; /* Full width slider */
+  margin: 0 auto;
 
 }
 
@@ -2352,9 +2334,12 @@ input[type="range"] {
 
 #slider_175::-webkit-slider-runnable-track {
     background: var(--slider-color);
-    height: 8px;
+    height: 14px;
     border-radius: 5px;
     cursor: pointer;
+    position: relative;
+    appearance: none;
+}
 
 .note {
   font-size: 0.875em; /* Smaller font size */
@@ -2363,6 +2348,18 @@ input[type="range"] {
   text-align: justify; /* Aligns text neatly */
   line-height: 1.4; /* Reduces line spacing */
 
+}
+
+.slider-label-container {
+  display: flex; /* Arrange children in a row */
+  justify-content: center; /* Center the sections horizontally */
+  align-items: center; /* Align the sections vertically */
+  gap: 10px; /* Add space between the sections */
+  text-align: center; /* Center text within each section */
+}
+
+.label-section {
+  line-height: 1.2; /* Adjust line height for better spacing */
 }
 
 /* End final tax rate calc section */
