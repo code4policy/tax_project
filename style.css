@@ -2295,11 +2295,44 @@ input[type="range"] {
 
   .denominator {
     text-align: center;
-    padding-top: 5px; /* Space between bar and denominator */
+    padding-top: 10px 0;
     border-radius: 0;
     width: 167px;
     margin-top: 10px;
+    position: relative;
   }
+
+  #exemptions {
+    font-size: 14px;
+    position: absolute;
+    bottom: 112px;
+    right: 120px;
+    width: 400px;
+  }
+
+  #exemptions-popup{
+    font-size: 16px !important;
+    line-height: 1.4;
+    position: absolute;
+    left: 770px;
+    bottom: 90px;
+    width: 370px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+    /* Hides it */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+/* Show popup */
+#exemptions:hover + #exemptions-popup, #exemptions-popup:hover  {
+    opacity: 1; 
+    visibility: visible; 
+}
 
   .equals {
     margin: 0 10px; /* Space on both sides of the equals sign */
