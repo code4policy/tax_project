@@ -19,24 +19,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to update the natural tax rate result
     const updateNtrResult = () => {
-        const numerator = parseFloat(ntrNumerator.textContent);
-        const denominator1 = parseFloat(ntrDenominator1.textContent);
-        const denominator2 = parseFloat(ntrDenominator2.textContent);
-        const totalDenominator = denominator1 + denominator2;
-        const result = (numerator / totalDenominator) * 1000;
-        ntrResult.textContent = result.toFixed(2);
+       
     };
 
     if (slider) {
         // Spending slider functionality
         slider.addEventListener('input', () => {
+            const numerator = parseFloat(ntrNumerator.textContent);
+            const denominator1 = parseFloat(ntrDenominator1.textContent);
+            const denominator2 = parseFloat(ntrDenominator2.textContent);
+            const totalDenominator = denominator1 + denominator2;   
+            const result = (numerator / totalDenominator) * 1000;   
             const value = parseFloat(slider.value);
             spendingVar.textContent = value.toFixed(1);
             spendingSliderValue = value;
 
             let propTaxValue = value - 1.3;
             propTaxVar.textContent = propTaxValue.toFixed(1);
-            ntrNumerator.textContent = propTaxValue.toFixed(1); // Update ntr-numerator
+            ntrNumerator.textContent = propTaxValue.toFixed(2); // Update ntr-numerator
+            ntrResult.textContent = result.toFixed(2); // Update ntr-result
+            console.log(ntrResult.textContent);
 
             let propTaxPercentage = Math.round((propTaxValue / value) * 100);
             propTaxPercVar.textContent = propTaxPercentage;
