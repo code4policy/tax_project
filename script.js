@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const denominatorSpans = document.querySelectorAll('.denominator span');
     const resultSpans = document.querySelectorAll('.result span');
     const commPropLevy = document.getElementById('comm-tax-levy-span');
-    const resPropLevy = document.querySelector('.res-tax-levy-span');
+    const resPropLevy = document.getElementById('res-tax-levy-span');
 
     if (commPropLevy) {
         // Create MutationObservers for commPropLevy
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateTaxRate = (index) => {
         const numerator = parseFloat(numeratorSpans[index].textContent);
         const denominator = parseFloat(denominatorSpans[index].textContent);
-        const taxRate = (numerator / denominator) * 1000;
+        const taxRate = (numerator / (denominator - 21.8)) * 1000;
         resultSpans[index].textContent = taxRate.toFixed(2);
     };
 
