@@ -151,7 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateTaxRate = (index) => {
         const numerator = parseFloat(numeratorSpans[index].textContent);
         const denominator = parseFloat(denominatorSpans[index].textContent);
-        const taxRate = (numerator / (denominator - 21.8)) * 1000;
+
+        // Subtract 21.8 only if index is 1
+        const adjustedDenominator = index === 1 ? denominator - 21.8 : denominator;
+        
+        const taxRate = (numerator / adjustedDenominator) * 1000;
+        
         resultSpans[index].textContent = taxRate.toFixed(2);
     };
 
