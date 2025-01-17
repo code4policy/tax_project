@@ -17,15 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let spendingSliderValue = 3.3284; // Default value
 
- // Function to update the natural tax rate result
- const updateNtrResult = () => {
-    const numerator = parseFloat(ntrNumerator.textContent);
-    const denominator1 = parseFloat(ntrDenominator1.textContent);
-    const denominator2 = parseFloat(ntrDenominator2.textContent);
-    const totalDenominator = denominator1 + denominator2;
-    const result = (numerator / totalDenominator) * 1000;
-    ntrResult.textContent = result.toFixed(2);
-};
+    // Function to update the natural tax rate result
+    const updateNtrResult = () => {
+        const numerator = parseFloat(ntrNumerator.textContent);
+        const denominator1 = parseFloat(ntrDenominator1.textContent);
+        const denominator2 = parseFloat(ntrDenominator2.textContent);
+        const totalDenominator = denominator1 + denominator2;
+        const result = (numerator / totalDenominator) * 1000;
+        ntrResult.textContent = result.toFixed(2);
+    };
 
     if (slider) {
         // Spending slider functionality
@@ -91,6 +91,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         slider175.addEventListener('input', () => {
             const value175 = parseFloat(slider175.value);
+            // Interactivity between sliders
+            console.log('HEY!')
+            const spendingValue = parseFloat(slider.value);
+            const propTaxValue = spendingValue - 1.3;
+            propTaxVar.textContent = propTaxValue.toFixed(1);
+    
+            let levyCommercial = (value175 / 100) * (propTaxValue / (156.079088 + 68.304382)) * 68.304382;
+            let levyResidential = propTaxValue - ((value175 / 100) * 0.01483 * 68.304382);
+    
+            levyCommercialVar.textContent = levyCommercial.toFixed(2);
+            levyResidentialVar.textContent = levyResidential.toFixed(2);
 
             if (value175 < 170) {
                 noteContainer175.innerHTML = `
@@ -109,25 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
                // Update the natural tax rate result
             updateNtrResult();
+            
         });
          // Initial update of the natural tax rate result
          updateNtrResult();
     }
 
-    // Start interactivity between sliders
-    slider175.addEventListener('input', () => {
-        const value175 = parseFloat(slider175.value);
-        const spendingValue = parseFloat(slider.value);
-        const propTaxValue = spendingValue - 1.3;
-        propTaxVar.textContent = propTaxValue.toFixed(1);
-
-        let levyCommercial = (value175 / 100) * (propTaxValue / (156.079088 + 68.304382)) * 68.304382;
-        let levyResidential = propTaxValue - ((value175 / 100) * 0.01483 * 68.304382);
-
-        levyCommercialVar.textContent = levyCommercial.toFixed(2);
-        levyResidentialVar.textContent = levyResidential.toFixed(2);
-    });
 });
+
 
     // Start interactivity of final tax rate block
 document.addEventListener('DOMContentLoaded', () => {
