@@ -1958,7 +1958,7 @@ error-text h1,.error-text .timeline-step-wrapper .timeline-number,.timeline-step
   /* width: 400px;                     Set a fixed width */
   /* margin: 160px auto;                Center the button with auto margins */
   /* padding: 10px;                    Add padding inside the button */
-  background-color: skyblue;        /* Green background for button */
+  background-color: #77cb73;        /* Green background for button */
   /* color: white;                     White text color */
   /* border: none;                     Remove the default border */
   /* border-radius: 5px;               Rounded corners */
@@ -1998,7 +1998,7 @@ button:hover {
 
 .green-box {
   background-color: #77cb73; 
-  color: white;
+  color: black;
   display:flex;
 }
 
