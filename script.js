@@ -127,8 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
         levyCommercialVar.textContent = levyCommercial.toFixed(2);
         levyResidentialVar.textContent = levyResidential.toFixed(2);
     });
+});
 
     // Start interactivity of final tax rate block
+document.addEventListener('DOMContentLoaded', () => {
     const numeratorSpans = document.querySelectorAll('.numerator span');
     const denominatorSpans = document.querySelectorAll('.denominator span');
     const resultSpans = document.querySelectorAll('.result span');
