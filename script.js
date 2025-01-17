@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (commPropLevy) {
         const levyObserver = new MutationObserver(() => {
-            numeratorSpans[0].textContent = parseFloat(commPropLevy.textContent).toFixed(1);
-            numeratorSpans[1].textContent = parseFloat(resPropLevy.textContent).toFixed(1);
+            numeratorSpans[0].textContent = parseFloat(commPropLevy.textContent).toFixed(2);
+            numeratorSpans[1].textContent = parseFloat(resPropLevy.textContent).toFixed(2);
         });
 
         levyObserver.observe(commPropLevy, { childList: true, characterData: true, subtree: true });

@@ -2131,6 +2131,7 @@ p {
   font-size: 1.2rem;
   color: #333;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .divider {
