@@ -639,14 +639,16 @@
         <img src="pv-image.png" alt="Arrow" style="width: 300px; height: auto; ">
       </div>
         <div class="ntr-fraction">
-          <div class="ntr-numerator">$<span>3.3</span> Billion </div>
+          <div class="ntr-numerator">$<span id="ntr-numerator">3.3</span> Billion </div>
           <div class="ntr-divider"></div>
           <div class="ntr-denominator">
+
             ($<span id="denominator-part1">68.3</span> Billion + $<span id="denominator-part2">156</span> Billion)
           </div>
-          </div>
+
+         </div>
         <div class="equals"><strong>=</strong></div>
-        <div class="ntr-result">$<span>14.83</span> per $1,000</div>
+        <div class="ntr-result">$<span id="'ntr-result">14.83</span> per $1,000</div>
       </div>
     </div>
   </div>
@@ -701,8 +703,8 @@
     </div>
 
     <div class="container" style="height: 100px">
-      <div class="box box1 green-box" style="width: 30%; height:100px">$<span id="comm-tax-levy-span">1.74</span> Billion</div>
-      <div class="box box2 green-box" style="width: 30%; height:100px">$<span id="res-tax-levy-span">1.57</span> Billion</div>
+      <div class="box box1 green-box" style="width: 30%; height:100px">$<span id="comm-tax-levy-span">1.77</span>&nbsp;Billion</div>
+      <div class="box box2 green-box" style="width: 30%; height:100px">$<span id="res-tax-levy-span">1.53</span>&nbsp;Billion</div>
     </div>
 
     <br>
@@ -715,7 +717,7 @@
           <div class="fraction">
             <div class="numerator">$<span>1.7</span> Billion</div>
             <div class="divider"></div>
-            <div class="denominator">$<span>60.8</span> Billion</div>
+            <div class="denominator">$<span>68.3</span> Billion</div>
           </div>
           <div class="equals"><strong>=</strong></div>
           <div class="result">$<span>27.96</span> per $1,000</div>
@@ -728,11 +730,16 @@
           <div class="fraction">
             <div class="numerator">$<span>1.6</span> Billion</div>
             <div class="divider"></div>
-            <div class="denominator">$<span>143</span> Billion</div>
+            <div class="denominator">
+              $<span>156</span> Billion
               <span id="exemptions">
-                - Exemptions
+                *
               </span>
-              <div id="exemptions-popup">Boston offers <a href="https://www.boston.gov/departments/assessing/filing-property-tax-exemption#exemption-programs">property tax exemptions</a>, which effectively drive the tax rate higher</div>
+              <div id="exemptions-popup">
+                <a href="https://www.boston.gov/departments/assessing/filing-property-tax-exemption#exemption-programs">Boston offers residential property tax exemptions</a>, $21.8B in exemptions are subtracted from this assessed total before calculating the tax rate.
+              </div>
+            </div>
+          
           </div>
           <div class="equals"><strong>=</strong></div>
           <div class="result">$<span>11.00</span> per $1,000</div>
