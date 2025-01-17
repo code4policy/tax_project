@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const spendingVar = document.getElementById('spending-var');
     const noteContainer = document.getElementById('note-container');
     const propTaxVar = document.getElementById('prop-tax-var');
+    const ntrNumerator = document.getElementById('ntr-numerator');
+    const ntrDenominator1 = document.getElementById('ntr-denominator1');
+    const ntrDenominator2 = document.getElementById('ntr-denominator2');
+    const ntrResult = document.getElementById('ntr-result');
     const propTaxPercVar = document.getElementById('prop-tax-perc-var');
     const otherTaxPercVar = document.getElementById('other-tax-perc-var');
     const noteContainer175 = document.getElementById('note-container-175');
@@ -53,6 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+ // Function to update the natural tax rate result
+ const updateNtrResult = () => {
+    const numerator = parseFloat(ntrNumerator.textContent);
+    const denominator1 = parseFloat(ntrDenominator1.textContent);
+    const denominator2 = parseFloat(ntrDenominator2.textContent);
+    const totalDenominator = denominator1 + denominator2;
+    const result = (numerator / totalDenominator) * 1000;
+    ntrResult.textContent = result.toFixed(2);
+};
+
     if (slider) {
         // Spending slider functionality
         slider.addEventListener('input', () => {
@@ -61,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let propTaxValue = value - 1.3;
             propTaxVar.textContent = propTaxValue.toFixed(1);
+            ntrNumerator.textContent = propTaxValue.toFixed(1); // Update ntr-numerator
 
             let propTaxPercentage = Math.round((propTaxValue / value) * 100);
             propTaxPercVar.textContent = propTaxPercentage;
@@ -81,7 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 noteContainer.style.visibility = 'hidden'; // Hides the content
                 noteContainer.style.opacity = '0'; // Fully transparent
             }
+               // Update the natural tax rate result
+            updateNtrResult();
         });
+         // Initial update of the natural tax rate result
+         updateNtrResult();
     }
 
     // Start interactivity of final tax rate block
