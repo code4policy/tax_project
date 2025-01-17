@@ -2354,9 +2354,8 @@ input[type="range"] {
   #exemptions {
     font-size: 14px;
     position: absolute;
-    bottom: -10px;
-    right: 280px;
-    width: 400px;
+    top: 0px;
+    right: 10px;
     cursor: pointer;
   }
 
@@ -2364,13 +2363,14 @@ input[type="range"] {
     font-size: 16px !important;
     line-height: 1.4;
     position: absolute;
-    left: 770px;
-    bottom: -30px;
+    left: 100%;
+    bottom: 0px;
     width: 370px;
     padding: 10px;
     border: 2px solid black;
     border-radius: 8px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background: white;
 
     /* Hides it */
     opacity: 0;
@@ -2394,7 +2394,7 @@ input[type="range"] {
     border-radius: 5px;
   }
 
-
+/* End final tax rate calc section */
   #slider_175 {
   width: 30%; /* Full width slider */
   margin: 0 auto;
@@ -2442,5 +2442,3 @@ input[type="range"] {
 .label-section {
   line-height: 1.2; /* Adjust line height for better spacing */
 }
-
-/* End final tax rate calc section */
